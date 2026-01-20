@@ -1,28 +1,26 @@
 {
-  "name": "taskflow.cxx",
-  "version": "4.2026.5",
-  "description": "A General-purpose Task-parallel Programming System using Modern C++; Tsung-Wei Huang (2018).",
+  "name": "scope_guard.cxx",
+  "version": "0.9.1",
+  "description": "Scope Guard & Defer C++; Daniil Goncharov (2018).",
   "keywords": [
     "c++",
     "library",
-    "taskflow",
-    "parallel",
-    "concurrency",
-    "multithreading",
-    "task graph",
-    "thread pool"
+    "scope guard",
+    "defer",
+    "raii",
+    "resource management"
   ],
-  "homepage": "https://github.com/nodef/taskflow.cxx#readme",
+  "homepage": "https://github.com/nodef/scope_guard.cxx#readme",
   "bugs": {
-    "url": "https://github.com/nodef/taskflow.cxx/issues"
+    "url": "https://github.com/nodef/scope_guard.cxx/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nodef/taskflow.cxx.git"
+    "url": "git+https://github.com/nodef/scope_guard.cxx.git"
   },
   "license": "MIT",
   "author": "wolfram77@gmail.com",
-  "main": "taskflow.hpp",
+  "main": "scope_guard.hpp",
   "scripts": {
     "test": "bash build.sh test"
   }
