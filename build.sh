@@ -16,12 +16,12 @@ fi
 
 # Test the project
 test() {
-echo "Running 01-parse-name-age.cxx ..."
-clang -I. -o 01.exe examples/01-parse-name-age.cxx    && ./01.exe && echo -e "\n"
-echo "Running 02-parse-value-unit.cxx ..."
-clang -I. -o 02.exe examples/02-parse-value-unit.cxx  && ./02.exe && echo -e "\n"
-echo "Running 03-parse-date.cxx ..."
-clang -I. -o 03.exe examples/03-parse-date.cxx        && ./03.exe && echo -e "\n"
+echo "Running 01-scope_exit.cxx ..."
+g++ -I. -o 01.exe examples/01-scope_exit.cxx     && ./01.exe && echo -e "\n"
+echo "Running 02-scope_fail.cxx ..."
+g++ -I. -o 02.exe examples/02-scope_fail.cxx     && ./02.exe && echo -e "\n"
+echo "Running 03-scope_success.cxx ..."
+g++ -I. -o 03.exe examples/03-scope_success.cxx  && ./03.exe && echo -e "\n"
 }
 
 
