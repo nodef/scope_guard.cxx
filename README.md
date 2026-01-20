@@ -22,23 +22,23 @@ Program control transferring does not influence Scope Guard statement execution.
 * No implicitly ignored return, check callback return void
 * Defer or Scope Guard syntax and "With" syntax
 
-## [Examples](example)
+## [Examples](https://github.com/Neargye/scope_guard/blob/master/example)
 
-* [Scope Guard on exit](example/scope_exit_example.cpp)
+* [Scope Guard on exit](https://github.com/Neargye/scope_guard/blob/master/example/scope_exit_example.cpp)
 
   ```cpp
   std::fstream file("test.txt");
   SCOPE_EXIT{ file.close(); }; // File closes when exit the enclosing scope or errors occur.
   ```
 
-* [Scope Guard on fail](example/scope_fail_example.cpp)
+* [Scope Guard on fail](https://github.com/Neargye/scope_guard/blob/master/example/scope_fail_example.cpp)
 
   ```cpp
   persons.push_back(person); // Add the person to db.
   SCOPE_FAIL{ persons.pop_back(); }; // If errors occur, we should roll back.
   ```
 
-* [Scope Guard on success](example/scope_success_example.cpp)
+* [Scope Guard on success](https://github.com/Neargye/scope_guard/blob/master/example/scope_success_example.cpp)
 
   ```cpp
   person = new Person{/*...*/};
@@ -75,6 +75,37 @@ Program control transferring does not influence Scope Guard statement execution.
     // ...
   };
   ```
+
+## Installation
+
+Run:
+
+```bash
+$ npm i scope_guard.cxx
+```
+
+And then include `scope_guard.hpp` as follows:
+
+```cxx
+// main.cxx
+#include <scope_guard.hpp>
+
+int main() { /* ... */ }
+```
+
+Finally, compile while adding the path `node_modules/scope_guard.cxx` to your compiler's include paths.
+
+```bash
+$ clang++ -I./node_modules/scope_guard.cxx main.cxx  # or, use g++
+$ g++     -I./node_modules/scope_guard.cxx main.cxx
+```
+
+You may also use a simpler approach with the [cpoach](https://www.npmjs.com/package/cpoach.sh) tool, which automatically adds the necessary include paths of all the installed dependencies for your project.
+
+```bash
+$ cpoach clang++ main.cxx  # or, use g++
+$ cpoach g++     main.cxx
+```
 
 ## Synopsis
 
@@ -145,7 +176,7 @@ scope_exit, scope_fail, scope_success implement scope_guard interface.
 
 ## Integration
 
-You should add required file [scope_guard.hpp](include/scope_guard.hpp).
+You should add required file [scope_guard.hpp](scope_guard.hpp).
 
 ## References
 
@@ -153,3 +184,12 @@ You should add required file [scope_guard.hpp](include/scope_guard.hpp).
 * [Andrei Alexandrescu “Declarative Control Flow"](https://youtu.be/WjTrfoiB0MQ)
 
 ## Licensed under the [MIT License](LICENSE)
+
+<br>
+<br>
+
+
+[![](https://raw.githubusercontent.com/qb40/designs/gh-pages/0/image/11.png)](https://wolfram77.github.io)<br>
+[![SRC](https://img.shields.io/badge/src-repo-green?logo=Org)](https://github.com/Neargye/scope_guard)
+[![ORG](https://img.shields.io/badge/org-nodef-green?logo=Org)](https://nodef.github.io)
+![](https://ga-beacon.deno.dev/G-RC63DPBH3P:SH3Eq-NoQ9mwgYeHWxu7cw/github.com/nodef/scope_guard.cxx)
